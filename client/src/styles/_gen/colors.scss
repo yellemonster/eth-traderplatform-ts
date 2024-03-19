@@ -1,0 +1,170 @@
+$colors: ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13");
+
+$color-themes: (
+    "L": "light",
+    "M": "medium",
+    "D": "dark",
+);
+
+@each $theme-key, $theme-value in $color-themes {
+    @each $level in $colors {
+        .C-#{$theme-key}#{$level} {
+            color: var(--#{$theme-value}-#{$level}) !important;
+            text-shadow: var(--txt-sh);
+        }
+    }
+}
+
+@each $color in $colors {
+    .BG-L#{$color} {
+        background-color: var(--light-#{$color}) !important;
+        background: var(--light-#{$color}) !important;
+    }
+}
+
+@each $color in $colors {
+    .BG-M#{$color} {
+        background-color: var(--medium-#{$color}) !important;
+        background: var(--medium-#{$color}) !important;
+    }
+}
+
+@each $color in $colors {
+    .BG-D#{$color} {
+        background-color: var(--dark-#{$color}) !important;
+        background: var(--dark-#{$color}) !important;
+    }
+}
+
+/* ========================================================= */
+
+.c-b {
+    color: var(--blu) !important;
+    text-shadow: var(--txt-sh);
+}
+.c-bs {
+    color: var(--blu-soft) !important;
+    text-shadow: var(--txt-sh);
+}
+
+.c-g {
+    color: var(--grn) !important;
+    text-shadow: var(--txt-sh);
+}
+.c-gs {
+    color: var(--grn-soft) !important;
+    text-shadow: var(--txt-sh);
+}
+
+.c-r {
+    color: var(--red) !important;
+    text-shadow: var(--txt-sh);
+}
+.c-rs {
+    color: var(--red-soft) !important;
+    text-shadow: var(--txt-sh);
+}
+
+.c-y {
+    color: var(--ylw) !important;
+    text-shadow: var(--txt-sh);
+}
+.c-ys {
+    color: var(--ylw-soft) !important;
+    text-shadow: var(--txt-sh);
+}
+
+.c-m {
+    color: magenta !important;
+    text-shadow: var(--txt-sh);
+}
+.c-ms {
+    color: var(--mag-soft) !important;
+    text-shadow: var(--txt-sh);
+}
+.c-o {
+    color: var(--orn) !important;
+    text-shadow: var(--txt-sh);
+}
+.c-os {
+    color: rgb(192, 131, 82);
+    text-shadow: var(--txt-sh);
+}
+.c-w {
+    color: var(--wht) !important;
+    text-shadow: var(--txt-sh);
+}
+
+.c-blz {
+    color: rgb(136, 148, 148);
+    text-shadow: var(--txt-sh);
+}
+
+.c-brn {
+    background-color: rgb(133, 84, 55);
+}
+
+/* ======================================================= */
+
+.BG-YS {
+    background-color: var(--ylw-soft) !important;
+    background: var(--ylw-soft) !important;
+}
+
+.BG-RS {
+    background-color: var(--red-soft) !important;
+    background: var(--red-soft) !important;
+}
+
+.BG-GS {
+    background-color: var(--grn-soft) !important;
+    background: var(--grn-soft) !important;
+}
+
+.BG-BS {
+    background-color: var(--blu-soft) !important;
+    background: var(--blu-soft) !important;
+}
+
+.BG-MS {
+    background-color: var(--mag-soft) !important;
+    background: var(--mag-soft) !important;
+}
+
+/* ======================================================= */
+
+.BG-G {
+    background-color: var(--grn) !important;
+}
+.BG-B {
+    background-color: var(--blu) !important;
+}
+.BG-R {
+    background-color: var(--red) !important;
+}
+.BG-Y {
+    background-color: var(--ylw) !important;
+}
+.BG-O {
+    background-color: var(--orn) !important;
+}
+.BG-W {
+    background-color: var(--wht) !important;
+}
+.BG-M {
+    background-color: var(--mag) !important;
+}
+
+.c-btn {
+    color: rgb(192, 131, 82);
+}
+
+.BG-SH {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.BG-SH2 {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.TileBG {
+    background: #4f4f56d4;
+}

@@ -1,0 +1,54 @@
+/* ---------------------------------------- */
+
+.Input {
+    width: 100%;
+    font-size: 2rem;
+    align-content: center;
+    padding: 1rem;
+
+    background-color: var(--dark-9);
+    border: none;
+
+    color: var(--blu-soft);
+}
+
+.Input::placeholder {
+    font-style: italic;
+    color: rgba(200, 156, 99, 0.6);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* ------------------------------------------------------ */
+
+.ChkBox {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    border-radius: 6px;
+    border: 1px solid var(--dark-6);
+    box-shadow: 0px 0px 4px 1px rgba(20, 20, 20, 0.5);
+}
+
+/* ------------------------------------------------------ */
+
+.Select {
+    padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1.1;
+    color: var(--blu);
+    width: 100%;
+    border: 1px solid var(--dark-3);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.Select > option {
+    font-size: inherit;
+    color: var(--blu);
+    background: rgba(255, 255, 255, 0.05);
+}

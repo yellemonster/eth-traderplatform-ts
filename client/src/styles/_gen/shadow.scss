@@ -1,0 +1,34 @@
+.TXT-SH-B {
+    text-shadow: 0px 0px 5px rgba(0, 195, 255, 0.4);
+}
+.TXT-SH-G {
+    text-shadow: 0px 0px 5px rgba(102, 255, 0, 0.4);
+}
+.TXT-SH-R {
+    text-shadow: 0px 0px 5px rgba(255, 94, 0, 0.4);
+}
+.TXT-SH-Y {
+    text-shadow: 0px 0px 5px rgba(229, 255, 0, 0.4);
+}
+.TXT-SH-W {
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.4);
+}
+
+.SH {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.SH-I {
+    box-shadow: inset 3px 3px 3px -1px rgba(0, 0, 0, 0.4);
+}
+.SH-IX {
+    box-shadow: inset 3px 3px 3px -1px rgba(0, 0, 0, 0.7);
+}
+
+.No-SH {
+    text-shadow: none !important;
+}
+
+.NTS {
+    text-shadow: none;
+}

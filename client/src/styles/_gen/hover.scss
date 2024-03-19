@@ -1,0 +1,65 @@
+$colors: ("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12");
+
+$color-themes: (
+    "L": "light",
+    "M": "medium",
+    "D": "dark",
+    "B": "var(--blu)",
+);
+
+@each $theme-key, $theme-value in $color-themes {
+    @each $level in $colors {
+        .H-C-#{$theme-key}#{$level}:hover {
+            color: var(--#{$theme-value}-#{$level}) !important;
+            text-shadow: var(--txt-sh);
+        }
+    }
+}
+
+@each $color in $colors {
+    .H-BG-L#{$color}:hover {
+        background-color: var(--light-#{$color}) !important;
+        background: var(--light-#{$color}) !important;
+    }
+}
+
+@each $color in $colors {
+    .H-BG-M#{$color}:hover {
+        background-color: var(--medium-#{$color}) !important;
+        background: var(--medium-#{$color}) !important;
+    }
+}
+
+@each $color in $colors {
+    .H-BG-D#{$color}:hover {
+        background-color: var(--dark-#{$color}) !important;
+        background: var(--dark-#{$color}) !important;
+    }
+}
+
+// ------------------------------------------------------------
+
+.HCP {
+    cursor: pointer;
+}
+
+.H-1-B:hover {
+    border: 1px solid var(--blu) !important;
+}
+.H-1-W:hover {
+    border: 1px solid var(--wht) !important;
+}
+
+.H-2-B:hover {
+    border: 2px solid var(--blu) !important;
+}
+.H-2-W:hover {
+    border: 2px solid var(--wht) !important;
+}
+
+.H-C-B:hover {
+    color: var(--blu) !important;
+}
+.H-C-R:hover {
+    color: var(--red) !important;
+}

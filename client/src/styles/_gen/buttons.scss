@@ -1,0 +1,155 @@
+.BaseBtn {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    // border-radius: 5px;
+    justify-content: center;
+    cursor: pointer;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.15s;
+
+    &:hover {
+        color: var(--dark-6);
+    }
+
+    &:active {
+        background-color: var(--medium-4) !important;
+    }
+}
+
+.Btn,
+.IBtn,
+.CBtn,
+.BtnDisabled {
+    @extend .BaseBtn;
+}
+
+.Btn,
+.IBtn,
+.CBtn {
+    background-color: var(--dark-3);
+    border: 2px solid var(--dark-7);
+    color: rgb(192, 131, 82);
+}
+
+.Btn:hover,
+.IBtn:hover {
+    box-shadow: none;
+    color: var(--orn) !important;
+    border: 2px solid var(--orn);
+    background-color: rgb(20, 20, 20);
+}
+
+.CBtn {
+    box-shadow: none;
+    color: var(--orn);
+    border: 2px solid var(--orn);
+    background: var(--dark-4) !important;
+}
+
+.BtnDisabled {
+    background-color: var(--dark-8);
+    border: 2px solid var(--dark-2);
+    color: var(--dark-1);
+}
+
+/* ----------------------------- */
+
+.BBtn,
+.GBtn,
+.RBtn,
+.YBtn,
+.WBtn,
+.MBtn,
+.OBtn {
+    display: flex;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.15s;
+
+    background-color: var(--dark-10);
+}
+
+.BBtn:hover,
+.GBtn:hover,
+.RBtn:hover,
+.YBtn:hover,
+.WBtn:hover,
+.MBtn:hover,
+.OBtn:hover {
+    color: var(--dark-6);
+}
+
+.BBtn:active,
+.GBtn:active,
+.RBtn:active,
+.YBtn:active,
+.WBtn:active,
+.MBtn:active,
+.OBtn:active {
+    background-color: var(--medium-4) !important;
+}
+
+/* ------------------------------------------- */
+
+.BBtn {
+    border: 2px solid var(--blu);
+    color: var(--blu);
+}
+.BBtn:hover {
+    background-color: var(--blu);
+}
+
+.GBtn {
+    border: 2px solid var(--grn);
+    color: var(--grn);
+}
+.GBtn:hover {
+    background-color: var(--grn);
+}
+
+.RBtn {
+    border: 2px solid var(--red);
+    color: var(--red);
+}
+.RBtn:hover {
+    background-color: var(--red);
+}
+
+.YBtn {
+    border: 2px solid var(--ylw);
+    color: var(--ylw);
+}
+.YBtn:hover {
+    background-color: var(--ylw);
+}
+
+.WBtn {
+    border: 2px solid var(--light-6);
+    color: var(--light-6);
+}
+.WBtn:hover {
+    background-color: var(--light-6);
+}
+
+.MBtn {
+    border: 2px solid var(--mag);
+    color: var(--mag);
+}
+.MBtn:hover {
+    background-color: var(--mag);
+}
+
+.OBtn {
+    border: 2px solid var(--orn);
+    color: var(--orn);
+}
+.OBtn:hover {
+    background-color: var(--orn);
+}

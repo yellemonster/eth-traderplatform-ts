@@ -1,0 +1,58 @@
+$padding-values: (
+    "0": 0rem,
+    "01": 0.1rem,
+    "015": 0.15rem,
+    "02": 0.2rem,
+    "025": 0.25rem,
+    "03": 0.3rem,
+    "035": 0.35rem,
+    "04": 0.4rem,
+    "05": 0.5rem,
+    "06": 0.6rem,
+    "07": 0.7rem,
+    "08": 0.8rem,
+    "09": 0.9rem,
+    "1": 1rem,
+    "1-5": 1.5rem,
+    "1-6": 1.6rem,
+    "1-7": 1.7rem,
+    "1-8": 1.8rem,
+    "1-9": 1.9rem,
+    "2": 2rem,
+    "3": 3rem,
+    "4": 4rem,
+    "5": 5rem,
+    "6": 6rem,
+    "7": 7rem,
+    "8": 8rem,
+);
+
+@each $key, $value in $padding-values {
+    .P-#{$key} {
+        padding: $value !important;
+    }
+    .PX-#{$key} {
+        padding-left: $value !important;
+        padding-right: $value !important;
+    }
+    .PY-#{$key} {
+        padding-top: $value !important;
+        padding-bottom: $value !important;
+    }
+    .PT-#{$key} {
+        padding-top: $value !important;
+    }
+    .PR-#{$key} {
+        padding-right: $value !important;
+    }
+    .PL-#{$key} {
+        padding-left: $value !important;
+    }
+    .PB-#{$key} {
+        padding-bottom: $value !important;
+    }
+}
+
+.SP {
+    padding: 0.5rem 1rem;
+}

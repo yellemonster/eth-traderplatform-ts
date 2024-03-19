@@ -1,0 +1,249 @@
+@import "./blur.scss";
+@import "./border.scss";
+@import "./buttons.scss";
+@import "./colors.scss";
+@import "./grid.scss";
+@import "./hover.scss";
+@import "./inputs.scss";
+@import "./margin.scss";
+@import "./modal.scss";
+@import "./padding.scss";
+@import "./positions.scss";
+@import "./shadow.scss";
+@import "./sizing.scss";
+@import "./zIndex.scss";
+@import "./Scroll.scss";
+
+@font-face {
+    font-family: "Quantico";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""), url("../../font/Quantico.woff2") format("woff2");
+}
+
+* {
+    letter-spacing: 1px;
+    line-height: 20pt !important;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-clip: padding-box;
+
+    font-family: "Quantico", sans-serif;
+
+    --ylw: rgb(251, 255, 0);
+    --ylw-soft: rgba(217, 219, 136, 0.9);
+
+    --red: rgb(255, 38, 0);
+    --red-soft: rgb(235, 153, 138);
+
+    --grn: rgb(103, 243, 10);
+    --grn-soft: rgba(152, 198, 120, 0.8);
+
+    --blu: rgb(10, 187, 241);
+    --blu-soft: rgb(111, 155, 169);
+
+    --mag: rgba(226, 21, 226, 0.95);
+    --mag-soft: rgba(236, 164, 218, 0.8);
+
+    --orn: rgb(245, 163, 10);
+    --orn-soft: rgb(238, 199, 125);
+
+    --wht: rgba(250, 250, 250, 0.85);
+    --blk: black !important;
+    --res: rgb(168, 204, 235);
+    --utl: rgb(184, 135, 224);
+
+    --txt-sh: 1px 1px 2px var(--dark-4);
+
+    --light-0: rgb(250, 250, 250, 0.95);
+    --light-1: rgb(245, 245, 245, 0.95);
+    --light-2: rgb(240, 240, 240, 0.95);
+    --light-3: rgb(235, 235, 235, 0.95);
+    --light-4: rgb(230, 230, 230, 0.95);
+    --light-5: rgb(225, 225, 225, 0.95);
+    --light-6: rgb(220, 220, 220, 0.95);
+    --light-7: rgb(215, 215, 215, 0.95);
+    --light-8: rgb(210, 210, 210, 0.95);
+    --light-9: rgb(205, 205, 205, 0.95);
+    --light-10: rgb(200, 200, 200, 0.95);
+    --light-11: rgb(195, 195, 195, 0.95);
+    --light-12: rgb(190, 190, 190, 0.95);
+    --light-12: rgb(185, 185, 185, 0.95);
+    --light-13: rgb(180, 180, 180, 0.95);
+
+    --medium-0: rgb(150, 150, 150, 0.95);
+    --medium-1: rgb(145, 145, 145, 0.95);
+    --medium-2: rgb(140, 140, 140, 0.95);
+    --medium-3: rgb(135, 135, 135, 0.95);
+    --medium-4: rgb(130, 130, 130, 0.95);
+    --medium-5: rgb(125, 125, 125, 0.95);
+    --medium-6: rgb(120, 120, 120, 0.95);
+    --medium-7: rgb(115, 115, 115, 0.95);
+    --medium-8: rgb(110, 110, 110, 0.95);
+    --medium-9: rgb(105, 105, 105, 0.95);
+    --medium-10: rgb(100, 100, 100, 0.95);
+    --medium-12: rgb(95, 95, 95, 0.95);
+    --medium-13: rgb(90, 90, 90, 0.95);
+
+    --dark-0: rgba(70, 70, 70, 0.95);
+    --dark-1: rgba(65, 65, 65, 0.95);
+    --dark-2: rgba(60, 60, 60, 0.95);
+    --dark-3: rgba(55, 55, 55, 0.95);
+    --dark-4: rgba(50, 50, 50, 0.95);
+    --dark-5: rgba(45, 45, 45, 0.95);
+    --dark-6: rgba(40, 40, 40, 0.95);
+    --dark-7: rgba(35, 35, 35, 0.95);
+    --dark-8: rgba(30, 30, 30, 0.95);
+    --dark-9: rgba(25, 25, 25, 0.95);
+    --dark-10: rgba(20, 20, 20, 0.95);
+    --dark-11: rgba(15, 15, 15, 0.95);
+    --dark-12: rgba(10, 10, 10, 0.95);
+    --dark-13: rgba(5, 5, 5, 0.95);
+}
+
+a {
+    text-decoration: none !important;
+    color: var(--medium-0);
+}
+a:visited {
+    color: var(--medium-0);
+}
+a:hover {
+    color: var(--orn);
+}
+
+.TB {
+    font-weight: bold !important;
+}
+
+.FR {
+    aspect-ratio: 1;
+}
+
+.AppGrid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 950px 1fr;
+    > div {
+        height: 950px;
+    }
+}
+
+.Background-Pattern {
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    color: rgba(200, 200, 200, 0.3);
+}
+
+.Body1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: -webkit-radial-gradient(
+        top,
+        rgba(35, 54, 72, 0.55),
+        rgba(37, 29, 43, 0.8)
+    );
+}
+
+.Screen {
+    width: 1900px;
+
+    align-items: start;
+
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.Panel {
+    background: linear-gradient(to top, var(--dark-1), var(--dark-2));
+    border: 1px solid var(--dark-3);
+}
+
+.BG-fade {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0));
+}
+
+.Panel-M {
+    background: linear-gradient(to top, var(--dark-1), var(--dark-2));
+}
+.Panel-D {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.65);
+    // border-radius: 5px;
+}
+
+.HRBB {
+    border-radius: 10px;
+    height: 20px;
+    // border: 1px solid var(--dark-);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6);
+    background: -webkit-radial-gradient(top, var(--dark-6), var(--dark-12));
+}
+
+.T0 {
+    transition: 0s !important;
+}
+.T015 {
+    transition: 0.15s !important;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    animation: rotate 2s linear infinite; /* Adjust the duration and timing function as needed */
+}
+
+.Histogram {
+    height: 100%;
+}
+
+.ChartBox {
+    position: relative;
+}
+
+.MRX {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    transition: 0.15s;
+    letter-spacing: 0;
+    z-index: 10;
+    > div:last-child {
+        position: absolute;
+        height: 5px;
+        width: 5px;
+        left: -3px;
+        top: -3px;
+        background-color: wheat;
+        border: 1px solid black;
+    }
+}
+.MRX:hover {
+    z-index: 15;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transform: scale(130%);
+}
+
+.ZeroLine {
+    height: 1px;
+    position: absolute;
+    left: 1px;
+    width: 545px;
+    background-color: rgba(0, 174, 255, 0.2);
+    z-index: 5;
+}

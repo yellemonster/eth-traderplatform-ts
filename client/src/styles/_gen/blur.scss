@@ -1,0 +1,16 @@
+.GlassWall {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+.GlassWallDark {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(0, 0, 0, 0.8);
+}
+
+.Blur-1 {
+  backdrop-filter: blur(1px);
+}

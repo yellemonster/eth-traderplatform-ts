@@ -1,0 +1,198 @@
+/* ------------------------------------ */
+
+.DF {
+    display: flex;
+}
+.FDR {
+    flex-direction: row;
+}
+.FDC {
+    flex-direction: column;
+}
+.FG-1 {
+    flex-grow: 1;
+}
+.FW {
+    flex-wrap: wrap;
+}
+
+/* ------------------------------------------ */
+
+.Up-10 {
+    transform: translateY(-7px);
+}
+
+.LH20 {
+    line-height: 20pt !important;
+}
+.LH25 {
+    line-height: 25pt !important;
+}
+.LH30 {
+    line-height: 30pt !important;
+}
+
+/* ------------------------------------------ */
+
+.PR0 {
+    right: 0;
+}
+
+.PT0 {
+    top: 0;
+}
+.PB0 {
+    bottom: 0;
+}
+
+.TopLeftCorner {
+    z-index: 10;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+}
+.TopRightCorner {
+    z-index: 10;
+    position: absolute;
+    transform: translateX(100%) translateY(-70%);
+}
+
+/* ------------------------------------------ */
+
+.Pos-Rel {
+    position: relative;
+}
+.Pos-Abs {
+    position: absolute;
+}
+.Pos-Cen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.Pos-Zero {
+    position: absolute;
+    transform: translateX(-70%) translateY(-70%);
+}
+
+/* ------------------------------------ */
+
+.AS {
+    align-items: flex-start;
+}
+.AC {
+    align-items: center;
+}
+.AE {
+    align-items: flex-end;
+}
+
+/* ------------------------------------ */
+
+.JC {
+    justify-content: center;
+}
+.JCS {
+    justify-content: flex-start;
+}
+.JCE {
+    justify-content: flex-end;
+}
+.JSB {
+    justify-content: space-between;
+}
+.JIS {
+    justify-items: flex-start;
+}
+.JSS {
+    justify-self: flex-start;
+}
+
+/* ------------------------------------ */
+
+.ASS {
+    align-self: flex-start;
+}
+.ASC {
+    align-self: center;
+}
+
+/* ------------------------------------ */
+
+.TXT-S {
+    text-align: start;
+}
+.TXT-C {
+    text-align: center;
+}
+.TXT-E {
+    text-align: end;
+}
+.TXT-J {
+    text-align: justify;
+}
+
+/* ------------------------------------ */
+
+.FCR > :first-child {
+    margin-left: auto;
+}
+.FCL > :first-child {
+    margin-right: auto;
+}
+
+.LCR > :last-child {
+    margin-left: auto;
+}
+.LCL > :last-child {
+    margin-right: auto;
+}
+
+/* ----------------------- */
+
+.SP-X-auto {
+    display: flex;
+    align-items: center;
+}
+
+.SP-Y-auto {
+    display: flex;
+    flex-direction: column;
+}
+
+.SP-X-auto > :not(:last-child) {
+    margin-right: auto;
+}
+.SP-y-auto > :not(:last-child) {
+    margin-bottom: auto;
+}
+
+$spacing-values: (
+    "05": 0.5rem,
+    "1": 1rem,
+    "2": 2rem,
+    "3": 3rem,
+    "4": 4rem,
+    "5": 5rem,
+    "10": 10rem,
+);
+
+@each $value, $spacing in $spacing-values {
+    .SP-X-#{$value},
+    .SP-Y-#{$value} {
+        display: flex;
+        // align-items: center;
+    }
+
+    .SP-Y-#{$value} {
+        flex-direction: column;
+    }
+
+    .SP-X-#{$value} > :not(:last-child) {
+        margin-right: $spacing;
+    }
+
+    .SP-Y-#{$value} > :not(:last-child) {
+        margin-bottom: $spacing;
+    }
+}

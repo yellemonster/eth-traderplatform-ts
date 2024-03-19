@@ -1,0 +1,138 @@
+$border-widths: (
+    "10": 10px,
+    "9": 9px,
+    "8": 8px,
+    "7": 7px,
+    "6": 6px,
+    "5": 5px,
+    "4": 4px,
+    "3": 3px,
+    "2": 2px,
+    "1": 1px,
+);
+
+$border-colors: (
+    "L0": "light-0",
+    "L1": "light-1",
+    "L2": "light-2",
+    "L3": "light-3",
+    "L4": "light-4",
+    "L5": "light-5",
+    "L6": "light-6",
+    "L7": "light-7",
+    "L8": "light-8",
+    "L9": "light-9",
+    "L10": "light-10",
+    "L11": "light-11",
+    "L12": "light-12",
+    "L13": "light-13",
+    //
+    "M0": "medium-0",
+    "M1": "medium-1",
+    "M2": "medium-2",
+    "M3": "medium-3",
+    "M4": "medium-4",
+    "M5": "medium-5",
+    "M6": "medium-6",
+    "M7": "medium-7",
+    "M8": "medium-8",
+    "M9": "medium-9",
+    "M10": "medium-10",
+    "M11": "medium-11",
+    "M12": "medium-12",
+    "M13": "medium-13",
+    //
+    "D0": "dark-0",
+    "D1": "dark-1",
+    "D2": "dark-2",
+    "D3": "dark-3",
+    "D4": "dark-4",
+    "D5": "dark-5",
+    "D6": "dark-6",
+    "D7": "dark-7",
+    "D8": "dark-8",
+    "D9": "dark-9",
+    "D10": "dark-10",
+    "D11": "dark-11",
+    "D12": "dark-12",
+    "D13": "dark-13",
+    //
+    "B": "blu",
+    "G": "grn",
+    "R": "red",
+    "Y": "ylw",
+    "W": "wht",
+    "O": "orn",
+    "M": "mag",
+);
+
+@each $width-key, $width-value in $border-widths {
+    @each $color-key, $color-value in $border-colors {
+        //
+        .B-#{$width-key}-#{$color-key} {
+            border: #{$width-value} solid var(--#{$color-value}) !important;
+        }
+        .BR-#{$width-key}-#{$color-key} {
+            border-right: #{$width-value} solid var(--#{$color-value}) !important;
+        }
+        .BL-#{$width-key}-#{$color-key} {
+            border-left: #{$width-value} solid var(--#{$color-value}) !important;
+        }
+        .BT-#{$width-key}-#{$color-key} {
+            border-top: #{$width-value} solid var(--#{$color-value}) !important;
+        }
+        .BB-#{$width-key}-#{$color-key} {
+            border-bottom: #{$width-value} solid var(--#{$color-value}) !important;
+        }
+    }
+}
+
+.B-2-R {
+    border: 2px solid var(--red) !important;
+}
+
+// =============================================
+
+$border-radius-values: (
+    "2": 2px,
+    "3": 3px,
+    "4": 4px,
+    "5": 5px,
+    "6": 6px,
+    "7": 7px,
+    "8": 8px,
+    "9": 9px,
+    "10": 10px,
+);
+
+@each $key, $value in $border-radius-values {
+    .BRAD-#{$key}P {
+        border-radius: $value !important;
+    }
+}
+
+// =============================================
+
+.BRTR-5 {
+    border-top-right-radius: 5px;
+}
+.BRBR-5 {
+    border-bottom-right-radius: 5px;
+}
+
+.BRBL-5 {
+    border-bottom-left-radius: 5px;
+}
+
+.BRT-5 {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.BRB-5 {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.Rnd {
+    border-radius: 50% !important;
+}
