@@ -4,6 +4,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import RootCntx from "./providers/RootCntx";
 import SoxCntx from "./providers/SoxCntx";
+import EthCntx from "./providers/EthCntx";
 import App from "./components/App";
 //
 //
@@ -14,7 +15,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
         <RootCntx>
             <SoxCntx>
-                <App />
+                <EthCntx>
+                    <App />
+                </EthCntx>
             </SoxCntx>
         </RootCntx>
     </React.StrictMode>

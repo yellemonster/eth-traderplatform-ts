@@ -12,6 +12,7 @@ import FactionNFT_ABI from "../../abis/FactionNFT.json";
 import MyToken_ABI from "../../abis/MyToken.json";
 import MySwap_ABI from "../../abis/MySwap.json";
 import EthPrice from "../EthPrice";
+import { EthCntxType, UseEth } from "../../providers/EthCntx";
 //
 const NFT_ADDR = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 //
@@ -66,7 +67,8 @@ function parse_events(eventFilter: any): {
 export default function MintScreen() {
     //
     //
-    const { provider, ethAddr, set_userAlerts } = UseRoot() as RootCntxType;
+    const { provider, ethAddr } = UseEth() as EthCntxType;
+    const { set_userAlerts } = UseRoot() as RootCntxType;
     //
     //
     const [nftContract, set_nftContract] = React.useState<any>(null);
@@ -185,7 +187,7 @@ export default function MintScreen() {
         const _swapName = await _swapContract.getName();
         const _swapRate = await _swapContract.swapRate();
         //
-        // console.log("swapName - ", _swapName);
+        console.log("swapName - ", swapName);
         // console.log("swapRate - ", _swapRate);
         // console.log("swapContract - ", _swapContract);
         //

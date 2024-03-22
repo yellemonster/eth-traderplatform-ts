@@ -11,6 +11,7 @@ import { ethers } from "ethers";
 import { H, T, qBtn } from "../../../../__PKG__/X";
 import { FaAngleDown, FaAngleUp, FaEthereum } from "react-icons/fa";
 import { RootCntxType, UseRoot, to_ETH, to_NUM } from "../../providers/RootCntx";
+import { EthCntxType, UseEth } from "../../providers/EthCntx";
 //
 //
 const GameNFT_ADDR = "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9";
@@ -80,7 +81,8 @@ function parse_events(eventFilter: any): {
 //
 export default function GameScreen() {
     //
-    const { provider, ethAddr, set_userAlerts } = UseRoot() as RootCntxType;
+    const { provider, ethAddr } = UseEth() as EthCntxType;
+    const { set_userAlerts } = UseRoot() as RootCntxType;
     //
     const [nftContract, set_nftContract] = React.useState<any>(null);
     const [ercContract, set_ercContract] = React.useState<any>(null);
@@ -113,7 +115,6 @@ export default function GameScreen() {
     const [selGame, set_selGame] = React.useState<T.GameDat | null>(null);
     const [selGamePlyrs, set_selGamePlyrs] = React.useState<string[]>([]);
     //
-    // const alias_input = MyInput("enter player alias", "", false, T.InpType.TXT, "SP");
     const gameName_input = MyInput("enter game name", "", false, T.InpType.TXT, "SP");
     //
     const [selWinPlyr, winnerSelect] = MySelect(selGamePlyrs);
@@ -229,6 +230,19 @@ export default function GameScreen() {
     const RELOAD = async () => {
         //
         if (!provider) {
+            //
+            console.log(ercContract);
+            console.log(nftName);
+            console.log(nftSupply);
+            console.log(nftSymbol);
+            console.log(nftBalance);
+            console.log(ercName);
+            console.log(ercSymbol);
+            console.log(ercSupply);
+            console.log(cEthBal);
+            console.log(userNFTs);
+            console.log(userERCs);
+            //
             return set_userAlerts([
                 {
                     header: "No provider",
@@ -236,6 +250,7 @@ export default function GameScreen() {
                 },
             ]);
         }
+        //
         //
         const { _gameContract, _ercContract } = await load_contracts(provider);
         load_balances(provider, ethAddr, _gameContract, _ercContract);

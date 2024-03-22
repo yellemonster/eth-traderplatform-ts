@@ -6,13 +6,15 @@ import Header from "./Header";
 import Orderbook from "./screens/Orderbook";
 import GameScreen from "./screens/GameScreen";
 import TokenScreen from "./screens/TokenScreen";
+import { EthCntxType, UseEth } from "../providers/EthCntx";
 //
 //
 export default function Main() {
     //
     //
-    const { cView, ethAddr, provider, networkId, LoadProvider, handleNetworkSwitch } =
-        UseRoot() as RootCntxType;
+    const { cView } = UseRoot() as RootCntxType;
+    const { ethAddr, provider, networkId, LoadProvider, handleNetworkSwitch } =
+        UseEth() as EthCntxType;
     //
     //
     const validNetwork = networkId === 4003 || networkId === 31337;

@@ -10,6 +10,7 @@ import { H, T } from "../../../../__PKG__/X";
 //
 import MYEXCHANGE_ABI from "../../abis/MyExchange.json";
 import MYTOKEN_ABI from "../../abis/MyToken.json";
+import { EthCntxType, UseEth } from "../../providers/EthCntx";
 //
 //
 const ETHER_ADDRESS = "0x0000000000000000000000000000000000000000";
@@ -146,7 +147,8 @@ function parse_events(eventFilter: any): {
 export default function Orderbook() {
     //
     //
-    const { set_userAlerts, provider, ethAddr } = UseRoot() as RootCntxType;
+    const { provider, ethAddr } = UseEth() as EthCntxType;
+    const { set_userAlerts } = UseRoot() as RootCntxType;
     //
     //
     const [allTokenContracts, set_allTokenContracts] = React.useState<any[]>([]);

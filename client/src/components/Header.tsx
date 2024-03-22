@@ -3,13 +3,15 @@
 import { FaTwitter } from "react-icons/fa";
 //
 import { RootCntxType, UseRoot, headerLinks } from "../providers/RootCntx";
+import { EthCntxType, UseEth } from "../providers/EthCntx";
 import { H } from "../../../__PKG__/X";
 //
 //
 export default function Header() {
     //
     //
-    const { ethAddr, cView, set_cView } = UseRoot() as RootCntxType;
+    const { ethAddr } = UseEth() as EthCntxType;
+    const { cView, set_cView } = UseRoot() as RootCntxType;
     //
     //
     return (
